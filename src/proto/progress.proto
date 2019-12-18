@@ -1,0 +1,42 @@
+syntax = "proto3";
+import "helpers.proto";
+
+message Mark {
+    uint64 id = 1;
+    uint32 nmb_retake = 2;
+    uint32 date = 3;
+    uint32 value = 4;
+}
+
+message Profile {
+    uint32 id = 1;
+    uint32 uid = 2;
+    Mark mark = 3;
+}
+
+message Statement {
+    uint64 id = 1;
+    uint32 semestr = 2;
+    uint32 year = 3;
+    uint32 control_type_id = 4;
+    uint64 subject_id = 6;
+    uint32 date = 8;
+    Profile profile = 9;
+    uint64 history_len = 10;
+    exonum.Hash history_hash = 11;
+}
+
+message Put {
+    uint64 id = 1;
+    uint32 semestr = 2;
+    uint32 year = 3;
+    uint32 control_type_id = 4;
+    uint64 subject_id = 6;
+    uint32 date = 8;
+    uint32 profile_id = 9;
+    uint32 profile_uid = 10;
+    uint64 mark_id = 11;
+    uint32 mark_nmb_retake = 12;
+    uint32 mark_date = 13;
+    uint32 mark_value = 14;
+}

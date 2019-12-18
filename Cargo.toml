@@ -1,0 +1,22 @@
+[package]
+name = "progress"
+version = "0.1.0"
+authors = ["Gleb Palshin <palshin.gp@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+exonum = "0.10.2"
+exonum-derive = "0.10.0"
+exonum-configuration = "0.10.1"
+serde = "1.0.0"
+serde_derive = "1.0.0"
+failure = "0.1.5"
+protobuf = "2.2.0"
+byteorder = "1"
+
+[build-dependencies]
+exonum-build = "0.10.0"
+
+[features]
+default = ["with-serde"]
+with-serde = []
