@@ -7,7 +7,7 @@ pub mod schema;
 pub mod transactions;
 pub mod statement;
 
-const SERVICE_ID: u16 = 10;
+const SERVICE_ID: u16 = 1;
 pub const SERVICE_NAME: &str = "progress";
 
 use exonum::{
