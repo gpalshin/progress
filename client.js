@@ -11,7 +11,7 @@ transactionEndpoint = "http://127.0.0.1:8080/api/explorer/v1/transactions"
 
 const Put = Exonum.newTransaction({
    author: keyPair.publicKey,
-   service_id: 10,
+   service_id: 1,
    message_id: 0,
    schema: proto.Put
 })
